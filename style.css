@@ -31,14 +31,13 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
 
 .group {
   display: flex;
-  flex-direction: column;
 }
 
 .item {
@@ -64,7 +63,14 @@ header {
   color: #fff;
 }
 
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
 header nav ul li {
+  text-align: center;
   list-style-type: none;
 }
 
@@ -87,6 +93,7 @@ form {
 
 form label {
   font-weight: bold;
+  text-align: left;
 }
 
 form select,
@@ -104,6 +111,11 @@ form button {
   width: 100%;
 }
 
+form div {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* -------  Footer ------- */
 
 footer {
@@ -117,3 +129,67 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 480px) {
+header {
+  display: flex;
+  justify-content: space-between;
+}
+header .logo {
+  font-size: 30px;
+}
+
+form div {
+  display: flex;
+flex-direction: column;
+width: 20%;
+}
+form {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+form button {
+  width: 150px;
+}
+main section div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+main section div p {
+  width: 40%;
+  overflow-wrap: wrap;
+}
+
+main section div img {
+  width: 25%;
+  height: 25%;
+}
+main section#host {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+main section#host div {
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+  margin-right: 12px;
+  justify-content: center;
+}
+
+main section#host p {
+  vertical-align: middle;
+  text-align:justify;
+  width:100%
+}
+
+main section#host img {
+  width: 50%;
+  height: 50%;
+}
+}
